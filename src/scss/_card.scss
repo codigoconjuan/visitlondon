@@ -1,0 +1,23 @@
+.card {
+      margin-bottom: 30px;
+      @include tablet {
+            width: 33.3%;
+            float: left;
+            padding: 0 20px;
+      }
+      .card-content {
+            background-color: $card-bg-color;
+            padding: 20px;
+            margin-top: -6px;
+            h3 {
+                  margin-bottom: 20px;
+                  font-size: map-get($heading-font-size, h3);
+            }
+            p {
+              font-size: $card-text-font-size;
+            }
+      }
+      &:after {
+        @include clearfix;
+      }
+}

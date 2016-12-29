@@ -1,0 +1,12 @@
+h1,h2,h3,h4,h5,h6 {
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+}
+h2 {
+  margin: 20px 0;
+}
+
+p {
+  font-size: $paragraph-font-size;
+}

@@ -1,0 +1,8 @@
+
+.btn {
+  @include button($yellow, darken($yellow,20), $white);
+}
+
+.btn-service {
+  @include button(darken($red, 20), darken($red, 10), $white);
+}

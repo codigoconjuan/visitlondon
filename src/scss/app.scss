@@ -1,12 +1,14 @@
-$black: #000000;
-
-body {
-  background-color: gray;
-}
-h1 {
-  color: white;
-}
-
-h1:hover {
-  transition: color 1s ease;
-}
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700);
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+@import 'layout';
+@import 'grid';
+@import 'navigation';
+@import 'backgrounds';
+@import 'card';
+@import 'buttons';
+@import 'gallery';
+@import 'tables';
+@import 'services';
+@import 'footer';

@@ -1,0 +1,26 @@
+.background-image {
+      display: table;
+      width: 100%;
+      position: relative;
+      .content-bg-image {
+            display: table-cell;
+            vertical-align: bottom;
+            padding: 0 20px 20px 20px;
+            position: relative;
+            h1 {
+              font-size: map-get($heading-font-size, h1);
+            }
+            p {
+              color: $white;
+              font-weight: 700;
+            }
+      }
+}
+
+.london {
+    @include bg-mixin('../img/bg/bg01.jpg', 600px, top center);
+}
+
+.subway {
+  @include bg-mixin('../img/bg/bg03.jpg', 350px);
+}

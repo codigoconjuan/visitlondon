@@ -1,0 +1,13 @@
+.gallery {
+      @include clearfix;
+      li.image-container {
+        float: left;
+        list-style: none;
+        @include grid-images(4, 2%);
+        img {
+              display: block;
+              max-width: 100%;
+              @include border-radius(10px);
+        }
+      }
+}

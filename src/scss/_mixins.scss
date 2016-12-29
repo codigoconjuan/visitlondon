@@ -1,0 +1,84 @@
+@mixin phone {
+  @media only screen and (min-width: map-get($breakpoints, 'phone') ) {
+        @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: map-get($breakpoints, 'tablet') ) {
+        @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (min-width: map-get($breakpoints, 'desktop') ) {
+        @content;
+  }
+}
+
+@mixin clearfix{
+    *zoom:1;
+    &:before,
+    &:after {
+      content:' ';
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+@mixin border-radius($border) {
+  border-radius: $border;
+}
+
+@mixin bg-mixin($image, $height: 100vh, $bgPosition: center center) {
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.6)), url($image);
+      background-repeat: no-repeat;
+      background-position: $bgPosition;
+      background-size: cover;
+      height: $height;
+}
+
+
+@mixin button($bg-color, $hover-color, $color){
+      @include border-radius(5px);
+      display: block;
+      background-color: $bg-color;
+      color: $color;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: $btn-font-size;
+      transition: all .3s ease;
+      font-weight: $btn-font-weight;
+      padding: 10px 30px;
+      margin-top: 20px;
+      @include tablet{
+        display: inline-block;
+      }
+      &:hover {
+        background-color: $hover-color;
+      }
+}
+
+@mixin grid-images($qty, $margin) {
+      width: ((100% - (($qty - 1) * $margin)) / $qty);
+      &:nth-child(n) {
+        margin-right: $margin;
+        margin-bottom: $margin;
+      }
+      &:nth-child(#{$qty}n + 1) {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+}
+
+
+
+

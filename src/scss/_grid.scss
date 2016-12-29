@@ -1,0 +1,47 @@
+.container {
+    margin: 0 auto;
+    width: 95%;
+    @include clearfix;
+    @include tablet {
+      width:90%;
+    }
+    @include desktop {
+      width:100%;
+      max-width: $grid-max-width;
+    }
+}
+
+.row {
+      @include clearfix;
+      @include tablet {
+            margin: 0 -1em;
+      }
+}
+
+[class*='column-'] {
+      @include border-box;
+      float: left;
+      padding: 1em;
+      width: 100%;
+}
+
+@include tablet {
+      @for $i from 1 through $columns {
+          .medium-column-#{$i} {
+            width: 100% / $columns * $i;
+          }
+      }
+}
+
+@include desktop {
+      @for $i from 1 through $columns {
+          .large-column-#{$i} {
+            width: 100% / $columns * $i;
+          }
+      }
+}
+
+
+
+
+
